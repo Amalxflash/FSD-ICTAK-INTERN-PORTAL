@@ -1,0 +1,22 @@
+.admin-profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align children (AdminNavbar, dashboard) horizontally at the center */
+  }
+  
+  .dashboard {
+    width: 100%; /* Ensure the dashboard takes full width */
+    max-width: 1200px; /* Limit the maximum width of the dashboard */
+  }
+  
+  .dashboard-content {
+    width: 100%; /* Ensure the content takes full width */
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .dashboard {
+      padding: 0 20px; /* Add padding on smaller screens */
+    }
+  }
+  

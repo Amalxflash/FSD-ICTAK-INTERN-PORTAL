@@ -1,0 +1,24 @@
+.mentor-display-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .mentor-display-heading {
+    text-align: center;
+    color: darkblue;
+    font-family: "Times New Roman";
+    text-decoration: underline;
+  }
+  
+  .table-container {
+    width: 100%;
+  }
+  
+  .update-button,
+  .delete-button {
+    background-color: lightblue;
+    color: black;
+  }
+  
