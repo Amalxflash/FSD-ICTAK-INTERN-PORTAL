@@ -13,7 +13,7 @@ const MentorNavbar = () => {
   };
 
   return (
-    <AppBar position="sticky" style={{ backgroundColor: '#06BBCC' }}>
+    <AppBar position="sticky" style={{ backgroundColor: 'black' }}>
       <Toolbar>
         <Grid container alignItems="center" justifyContent="space-between">
           {/* Logo */}
