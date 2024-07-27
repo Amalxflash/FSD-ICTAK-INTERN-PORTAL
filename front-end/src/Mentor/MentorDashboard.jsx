@@ -9,8 +9,19 @@ import { red } from "@mui/material/colors";
 const MentorDashboard = () => {
   const [mentor, setMentor] = useState(null);
   const [showProjects, setShowProjects] = useState(false);
-  const { id } = useParams();
+  const [mentorId, setMentorId] = useState(null);
 
+  const { id } = useParams();
+  useEffect(() => {
+    // Simulate fetching mentor ID from an API
+    const fetchMentorId = async () => {
+      const fetchedId = id; 
+      setMentorId(fetchedId);
+    };
+
+    fetchMentorId();
+  }, []);
+console.log(mentorId)
   useEffect(() => {
     // Fetch all details of the mentor
     axiosInstance
@@ -25,7 +36,9 @@ const MentorDashboard = () => {
 
   return (
     <>
-      <MentorNavbar />
+      {/* <MentorNavbar id={id}/> */}
+      {mentorId ? <MentorNavbar id={mentorId} /> : 'Loading...'}
+
       <div style={{ marginTop: "30px", display: "flex", justifyContent: "center", flexDirection: "column", padding: "0 20px" }}>
         <div style={{ borderRadius: "5px", backgroundColor: "white", padding: "20px" }}>
           <TableContainer component={Paper} style={{ padding: "10px", border: "1px solid #e3e3cf", borderRadius: "5px", backgroundColor: "rgb(182 182 199)", marginBottom: "20px" }}>
