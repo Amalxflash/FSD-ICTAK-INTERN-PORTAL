@@ -145,11 +145,11 @@ const AddSubmissions = () => {
                 helperText={alertMessages.Batch}
               >
                 <MenuItem value="">Select Batch</MenuItem>
-                <MenuItem value="KKEM March CSA">KKEM March CSA</MenuItem>
-                <MenuItem value="KKEM March DSA">KKEM March DSA</MenuItem>
-                <MenuItem value="KKEM March MLAI">KKEM March MLAI</MenuItem>
-                <MenuItem value="KKEM March FSD">KKEM March FSD</MenuItem>
-                <MenuItem value="KKEM March ST">KKEM March ST</MenuItem>
+                <MenuItem value="SMP March CSA">KKEM March CSA</MenuItem>
+                <MenuItem value="SMP March DSA">KKEM March DSA</MenuItem>
+                <MenuItem value="SMP March MLAI">KKEM March MLAI</MenuItem>
+                <MenuItem value="SMP March FSD">KKEM March FSD</MenuItem>
+                <MenuItem value="SMP March ST">KKEM March ST</MenuItem>
               </TextField>
             </Grid>
             <Grid item xs={12}>

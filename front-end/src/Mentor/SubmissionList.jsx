@@ -50,11 +50,11 @@ const SubmissionList = () => {
 
   // Default filter options
   const defaultFilterOptions = [
-    "KKEM March CSA",
-    "KKEM March DSA",
-    "KKEM March MLAI",
-    "KKEM March FSD",
-    "KKEM March ST",
+    "SMP March CSA",
+    "SMP March DSA",
+    "SMP March MLAI",
+    "SMP March FSD",
+    "SMP March ST",
   ];
 
   return (
