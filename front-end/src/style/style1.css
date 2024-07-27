@@ -122,7 +122,7 @@
 }
 .card{
     flex: 1;
-    background: #333535;
+    background:white;
     padding: 20px;
     border-radius: 10px;
     display: flex;
@@ -130,6 +130,7 @@
     flex-direction: column;
     gap: 20px;
     transition: 0.5s ease-in-out;
+    width:100%
 }
 .card:hover{
     transform: scale(1.04);
