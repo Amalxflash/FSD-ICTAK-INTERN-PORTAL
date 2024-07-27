@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import { AppBar, Toolbar, Typography, Button, Grid, Hidden } from '@mui/material';
-import { Link, useNavigate } from 'react-router-dom'; 
+import { Link, useNavigate, useParams } from 'react-router-dom'; 
 import { AuthContext } from '../AuthContext';
 
 const MentorNavbar = () => {
   const { logout } = useContext(AuthContext);
   const navigate = useNavigate();
+  const { mentorId } = useParams();
 
   const handleLogout = () => {
     logout();
@@ -21,7 +22,9 @@ const MentorNavbar = () => {
             <Typography variant="h6" style={{ color: 'white' }}>
               <i className="fa fa-book me-3" />
               ICTAK-Mentor Dashboard
+              
             </Typography>
+            
           </Grid>
           {/* Navigation Links & Logout Button */}
           <Grid item>
