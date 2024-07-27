@@ -5,10 +5,10 @@ import { BiNotification, BiSearch } from 'react-icons/bi';
 const ContentHeader = () => {
   return (
     <div className='content--header'>
-        <h1 className="header--title">Welcome Admin!!!</h1>
+        <h1 className="header--title">Welcome to ADMIN-Dashboard</h1>
         <div className="header--activity">
             <div className="search--box">
-                <input type='text' placeholder='Search Anything here...'/>
+                <input type='text' placeholder='Search..'/>
                 <BiSearch className='icon'/>
             </div>
 
