@@ -94,27 +94,27 @@ const SubmissionList = () => {
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell style={{ backgroundColor: "lightblue" }}>
+              <TableCell style={{ backgroundColor: "grey" }}>
                 Serial Number
               </TableCell>
-              <TableCell style={{ backgroundColor: "lightblue" }}>
+              <TableCell style={{ backgroundColor: "grey" }}>
                 Name
               </TableCell>
-              <TableCell style={{ backgroundColor: "lightblue" }}>
+              <TableCell style={{ backgroundColor: "grey" }}>
                 Batch
               </TableCell>
-              <TableCell style={{ backgroundColor: "lightblue" }}>
+              <TableCell style={{ backgroundColor: "grey" }}>
                 Email
               </TableCell>
-              <TableCell style={{ backgroundColor: "lightblue" }}>
-                Evaluation Status
+              <TableCell style={{ backgroundColor: "grey" }}>
+                URL
               </TableCell>
-              <TableCell style={{ backgroundColor: "lightblue" }}>
-                Actions
+              <TableCell style={{ backgroundColor: "grey" }}>
+                Status
               </TableCell>
-              <TableCell style={{ backgroundColor: "lightblue" }}>
+              <TableCell style={{ backgroundColor: "grey" }}>
               </TableCell>
-              <TableCell style={{ backgroundColor: "lightblue" }}>
+              <TableCell style={{ backgroundColor: "grey" }}>
               </TableCell>
             </TableRow>
           </TableHead>
@@ -122,7 +122,7 @@ const SubmissionList = () => {
             {filteredSubmissions.map((item, index) => (
               <TableRow
                 style={{
-                  backgroundColor: index % 2 === 0 ? "#f0f0f0" : "inherit",
+                  backgroundColor: index % 2 === 0 ? "#f0f0f0" : "inherit"
                 }}
                 key={index}
               >
@@ -149,7 +149,7 @@ const SubmissionList = () => {
                     variant="contained"
                     // color="secondary"
                     onClick={() => handleDelete(item._id)}
-                    style={{ backgroundColor: "blue", color: "black" }}
+                    style={{ backgroundColor: "rgb(234 60 60)", color: "white" }}
                   >
                     DELETE
                   </Button>

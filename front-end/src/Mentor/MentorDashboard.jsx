@@ -4,6 +4,7 @@ import axiosInstance from "../axiosInterceptor";
 import { useParams, Link } from "react-router-dom";
 import { Card, CardContent, Button, Typography, Table, TableCell, TableContainer, TableRow, Paper } from "@mui/material";
 import Footer from "../components/Footer";
+import { red } from "@mui/material/colors";
 
 const MentorDashboard = () => {
   const [mentor, setMentor] = useState(null);
@@ -27,19 +28,19 @@ const MentorDashboard = () => {
       <MentorNavbar />
       <div style={{ marginTop: "30px", display: "flex", justifyContent: "center", flexDirection: "column", padding: "0 20px" }}>
         <div style={{ borderRadius: "5px", backgroundColor: "white", padding: "20px" }}>
-          <TableContainer component={Paper} style={{ padding: "10px", border: "1px solid #e3e3cf", borderRadius: "5px", backgroundColor: "#e3e3cf", marginBottom: "20px" }}>
+          <TableContainer component={Paper} style={{ padding: "10px", border: "1px solid #e3e3cf", borderRadius: "5px", backgroundColor: "rgb(182 182 199)", marginBottom: "20px" }}>
             <Table>
               <TableRow>
-                <TableCell style={{ fontSize: "50px" }}>Welcome, {mentor?.Name} !!!</TableCell>
+                <TableCell style={{ fontSize: "50px",backgroundColor:"black",color:"white" }}>Welcome, {mentor?.Name} !!</TableCell>
               </TableRow>
             </Table>
           </TableContainer>
-          <TableContainer component={Paper} style={{ padding: "10px", border: "1px solid #e3e3cf", borderRadius: "5px", backgroundColor: "#e3e3cf", marginBottom: "20px" }}>
+          <TableContainer component={Paper} style={{ padding: "10px", border: "1px solid black", borderRadius: "5px", backgroundColor: "grey", marginBottom: "20px" }}>
             <Table>
               <TableRow>
                 <TableCell style={{ fontSize: "40px" }}>Profile</TableCell>
               </TableRow>
-              <TableContainer component={Paper} style={{ padding: "10px", border: "1px solid #06bccc", borderRadius: "5px", backgroundColor: "#06bccc", marginBottom: "20px" }}>
+              <TableContainer component={Paper} style={{ padding: "10px", border: "1px solid black", borderRadius: "5px", backgroundColor: "white", marginBottom: "20px" }}>
                 <Table>
                   <TableRow>
                     <TableCell style={{ fontSize: "20px" }}>Name:</TableCell>
@@ -57,7 +58,7 @@ const MentorDashboard = () => {
                     <TableCell style={{ fontSize: "20px" }}>Allotted Projects:</TableCell>
                     <TableCell style={{ fontSize: "20px" }}>
                       <Button
-                        style={{ backgroundColor: "white", color: "black" }}
+                        style={{ backgroundColor: "#95aa92", color: "black" }}
                         onClick={() => setShowProjects(!showProjects)}
                       >
                         {showProjects ? "HIDE" : "SHOW"}

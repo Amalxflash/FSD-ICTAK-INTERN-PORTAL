@@ -3,41 +3,37 @@ import "../style/style1.css";
 import course from "../images/course.png";
 
 const courses = [
-  {
-    image: course,
-    name: "Full Stack MERN",
-    duration: "20 hours lession",
-    cost: "100",
-  },
-  {
-    image: course,
-    name: "Full Stack MEAN",
-    duration: "20 hours lession",
-    cost: "100",
-  },
-  {
-    image: course,
-    name: "Full Stack .NET",
-    duration: "20 hours lession",
-    cost: "26",
-  },
-  {
-    image: course,
-    name: "Full Stack JAVA",
-    duration: "20 hours lession",
-    cost: "100",
-  },
+  // {
+  //   image: course,
+  //   name: "Full Stack MERN",
+  //   duration: "6 Months",
+  //   cost: "35,000",
+  // },
+  // {
+  //   image: course,
+  //   name: "Full Stack MEAN",
+  //   duration: "6 Months",
+  //   cost: "35,000",
+  // },
+  // {
+  //   image: course,
+  //   name: "Full Stack .NET",
+  //   duration: "6 Months",
+  //   cost: "26,000",
+  // },
+  // {
+  //   image: course,
+  //   name: "Full Stack JAVA",
+  //   duration: "6 Months",
+  //   cost: "20,000",
+  // },
 ];
 
 const CourseList = () => {
   return (
     <div className="teacher--list">
       <div className="list--header">
-        <h2>Courses</h2>
-        <select>
-          <option value="english">English</option>
-          <option value="hindi">Hindi</option>
-        </select>
+        <h2></h2>
       </div>
       <div className="list--container">
         {courses.map((course) => (
@@ -47,8 +43,8 @@ const CourseList = () => {
               <h5>{course.name}</h5>
             </div>
             <span>{course.duration}</span>
-            <span>${course.cost}/hr.</span>
-            <span className="teacher--todo">:</span>
+            <span>₹{course.cost}/-</span>
+            
           </div>
         ))}
       </div>
