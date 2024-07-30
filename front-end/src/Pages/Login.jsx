@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
 import axiosInstance from '../axiosInterceptor';
+import LogoBg from '../images/logo-bg.jpg';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -69,6 +70,7 @@ const Login = () => {
 
   return (
     <>
+    <div style={{backgroundImage: `url(${LogoBg})`}}>
       <Navbar />
       <div style={{ minHeight: 'calc(100vh - 64px)', paddingBottom: '40px', marginTop: '80px' }}>
         <Container maxWidth="xl" py={5}>
@@ -76,7 +78,7 @@ const Login = () => {
             <Grid item xs={12} sm={8} md={6}>
               <Box
                 sx={{
-                  backgroundColor: '#f5f5f5',
+                  backgroundColor: 'rgb(208, 220, 243, 0.3)',
                   borderRadius: '8px',
                   padding: '32px',
                   boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
@@ -86,7 +88,7 @@ const Login = () => {
                   variant="h4"
                   align="center"
                   gutterBottom
-                  style={{ backgroundColor: 'lightblue', color: 'black', height: '50px', borderRadius: '5px', paddingTop: '7px' }}
+                  style={{ backgroundColor: '#004080', color: '#f5f5f5', height: '50px', borderRadius: '5px', paddingTop: '7px' }}
                 >
                   LOGIN
                 </Typography>
@@ -138,6 +140,7 @@ const Login = () => {
         </Container>
       </div>
       <Footer />
+      </div>
     </>
   );
 };

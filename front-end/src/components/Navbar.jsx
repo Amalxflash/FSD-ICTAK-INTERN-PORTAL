@@ -2,7 +2,8 @@ import React from 'react';
 import { AppBar, Toolbar, Typography, Box, Button, Grid, Hidden, IconButton, Menu, MenuItem } from '@mui/material';
 import { Link } from 'react-router-dom'; 
 import MenuIcon from '@mui/icons-material/Menu';
-import Logo from '../images/course.png'
+import Logo from '../images/logo.png';
+
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
