@@ -20,13 +20,13 @@ const MentorNavbar = () => {
           <Grid item>
             <Typography variant="h6" style={{ color: 'white' }}>
               <i className="fa fa-book me-3" />
-              ICTAK-Mentor Dashboard
+              Mentor Dashboard
             </Typography>
           </Grid>
           {/* Navigation Links & Logout Button */}
           <Grid item>
             <Hidden lgUp>
-              < Button color="inherit" component={Link} to="/mentor/:id" className="nav-item nav-link">
+              < Button color="inherit"  onClick={() => navigate(-1)} className="nav-item nav-link">
                 Home
               </Button>
               <Button color="inherit" component={Link} to="/reference-material" className="nav-item nav-link">
@@ -34,7 +34,7 @@ const MentorNavbar = () => {
               </Button>
             </Hidden>
             <Hidden mdDown>
-              <Button color="inherit" component={Link} to="/mentor/:id" className="nav-item nav-link">
+              <Button color="inherit"  onClick={() => navigate(-1)} className="nav-item nav-link">
                 Home
               </Button> 
               <Button color="inherit" component={Link} to="/reference-material" className="nav-item nav-link">

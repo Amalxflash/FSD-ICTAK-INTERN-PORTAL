@@ -2,7 +2,7 @@ import React from 'react';
 import { AppBar, Toolbar, Typography, Box, Button, Grid, Hidden, IconButton, Menu, MenuItem } from '@mui/material';
 import { Link } from 'react-router-dom'; 
 import MenuIcon from '@mui/icons-material/Menu';
-import Logo from '../images/logo.png';
+import IctLogo from "../images/logo.png"
 
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -23,7 +23,7 @@ const Navbar = () => {
             {/* Logo */}
             <Grid item>
               <Link to="/">
-                <img src={Logo} alt="Logo" style={{ height: 40, width: 'auto' }} />
+             <img src={IctLogo} alt="Logo" style={{ height: 40, width: 'auto' }} />
               </Link>
             </Grid>
             {/* App Name */}

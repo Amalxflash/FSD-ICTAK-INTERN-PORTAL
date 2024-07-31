@@ -24,10 +24,9 @@ const AddMentor = () => {
   return (
     <>
     
-    <div>
+    <div style={{ background:"#004080", paddingBottom:"40px" }}>
       <AdminNavbar />
-      <br />
-      <br />
+       
       <AdminForm method="post" topics={topics} data={{ Name: "", Email: "", PhoneNumber: "", Password: "", ProjectTopic: "" }} />
     </div>
     <Footer/>

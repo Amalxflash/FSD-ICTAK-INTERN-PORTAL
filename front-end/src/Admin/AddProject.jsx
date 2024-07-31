@@ -30,10 +30,12 @@ const AddProject = ({ addTopic }) => {
   };
 
   return (
-    <div>
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Add Project
-      </Button>
+    <div className='p-10' style={{ padding:"20px", paddingBottom:"0px" ,  }}>
+      <div style={{ display:"flex",width:"100%",justifyContent:"end" }}>
+        <Button variant="contained" onClick={handleClickOpen}>
+          Add Project
+        </Button>
+      </div>
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle>Add New Project</DialogTitle>
         <DialogContent>

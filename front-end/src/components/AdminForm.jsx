@@ -103,7 +103,7 @@ const AdminForm = (props) => {
   };
 
   return (
-    <div className="admin-form-container">
+    <div className="admin-form-container"style={{ marginBottom:'60px', marginTop:"60px" }}>
       <Typography variant="h4" gutterBottom className="form-heading">
         {props.method === "post" ? "ADD MENTOR" : "UPDATE MENTOR"}
       </Typography>

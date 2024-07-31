@@ -80,17 +80,16 @@ const SubmissionView = () => {
       <div
         style={{
           padding: "10px",
-          borderRadius: "5px",
-          backgroundColor: "white",
+           backgroundColor:  "#004080",
         }}
       >
        <TableContainer
           component={Paper}
           style={{
             padding: "10px",
-            border: "1px solid #e3e3cf",
+            border: "1px solid #004080",
             borderRadius: "5px",
-            backgroundColor: "#e3e3cf",
+            backgroundColor: "#004080",
             marginBottom: "20px",
           }}
         >
@@ -161,7 +160,7 @@ const SubmissionView = () => {
       </div>
 
       {isCompleted ? (
-        <div style={{ margin: "auto", width: "70%" }}>
+        <div style={{ margin: "auto", width: "70%",  paddingBottom:"30px" }}>
           <br />
           <Typography variant="h6">Edit Submission</Typography>
           <br />

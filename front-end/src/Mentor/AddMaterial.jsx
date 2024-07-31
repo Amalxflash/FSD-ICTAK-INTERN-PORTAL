@@ -45,9 +45,12 @@ const AddMaterial = ({ addMaterial }) => {
 
   return (
     <div>
-      <Button variant="outlined" onClick={handleClickOpen}>
+      <div style={{ display:"flex" , background:"#004080" ,width:"100%", justifyContent:"end",marginBottom:"20px" }}>
+      <Button variant="contained" onClick={handleClickOpen}>
         Add Material
       </Button>
+      </div>
+     
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle>Add New Material</DialogTitle>
         <DialogContent>

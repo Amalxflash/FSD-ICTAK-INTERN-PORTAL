@@ -40,8 +40,9 @@ const ReferenceMaterial = () => {
   return (
     <>
       <MentorNavbar/>
+      <div style={{ padding:"30px", background:"#004080" }}>
       <AddMaterial addMaterial={addMaterial} />
-      <div style={{ margin: '7%' }}>
+      <div style={{ minHeight:"80vh", backgroundColor:"#004080"}}>
         <Grid container spacing={2}>
           {materials.map((material) => (
             <Grid item xs={12} sm={6} md={4} key={material._id}>
@@ -71,6 +72,7 @@ const ReferenceMaterial = () => {
             </Grid>
           ))}
         </Grid>
+      </div>
       </div>
       <Footer/>
     </>

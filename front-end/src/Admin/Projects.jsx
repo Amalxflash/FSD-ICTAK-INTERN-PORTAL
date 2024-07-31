@@ -5,11 +5,14 @@ import AddProject from './AddProject';
 import AdminNavbar from '../components/AdminNavbar';
 import '../style/Projects.css'
 import Footer from '../components/Footer';
+import ConfirmModal from "../components/ConfirmModal";
 
 const Projects = () => {
   const [topics, setTopics] = useState([]);
   const [editedTopic, setEditedTopic] = useState('');
   const [editId, setEditId] = useState('');
+  const [showModal, setshowModal] = useState(false);
+  const [projectId, setProjectId] = useState(null);
 
   useEffect(() => {
     fetchData();
@@ -26,9 +29,10 @@ const Projects = () => {
   };
 
   const deleteTopic = (id) => {
-    axiosInstance.delete(`/api/project/topics/${id}`)
+    axiosInstance.delete(`/api/project/topics/${projectId}`)
       .then(() => {
         alert('Project topic deleted successfully');
+        setshowModal(false);
         fetchData();
       })
       .catch((error) => {
@@ -62,14 +66,14 @@ const Projects = () => {
   };
 
   return (
-    <>
+    <div style={{ background:"#004080",  minHeight:"100vh"  }}>
       <AdminNavbar />
       <AddProject addTopic={addTopic} />
-      <div style={{ margin: '2%' }}>
+      <div style={{ margin: '2%',minHeight:"80vh" }}>
         <Grid container spacing={2}>
           {topics.map((topic) => (
             <Grid item xs={12} sm={6} md={4} key={topic._id}>
-              <Card sx={{ minWidth: 275 }} style={{ backgroundColor: "#f5f5f5" }}>
+              <Card sx={{ minWidth: 275 }} style={{ backgroundColor: "#f5f5f5", minHeight:"166px" , display:"flex", flexDirection:"column", justifyContent:"space-between", padding:"10px" }}>
                 <CardContent>
                   {editId === topic._id ? (
                     <TextField
@@ -102,7 +106,9 @@ const Projects = () => {
                         size='small'
                         variant='contained'
                         color='secondary'
-                        onClick={() => deleteTopic(topic._id)}
+                        onClick={()=>{setshowModal(true); setProjectId(topic._id)}}
+
+                        // onClick={() => deleteTopic(topic._id)}
                       >
                         Delete
                       </Button>
@@ -113,9 +119,10 @@ const Projects = () => {
             </Grid>
           ))}
         </Grid>
+        {   showModal ?   <ConfirmModal hide={()=>setshowModal(false)} handleDelete={()=>deleteTopic()}/> : null } 
       </div>
       <Footer/>
-    </>
+    </div>
   );
 };
 

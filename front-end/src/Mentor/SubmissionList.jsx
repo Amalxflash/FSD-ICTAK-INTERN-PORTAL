@@ -10,6 +10,7 @@ import { Button, Typography, TextField, Select, MenuItem, InputLabel } from "@mu
 import { Link } from "react-router-dom";
 import MentorNavbar from "../components/MentorNavbar";
 import axiosInstance from "../axiosInterceptor";
+import Footer from "../components/Footer";
 
 const SubmissionList = () => {
   const [sub, setSubmission] = useState([]);
@@ -60,10 +61,12 @@ const SubmissionList = () => {
   return (
     <>
       <MentorNavbar />
-      <br></br>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+       
+      <div style={{ padding:"20px",background:"#004080" }}>
+      <div className="" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <div style={{ flexGrow: 1 }}>
           <TextField
+            style={{ background:"white" }}
             label="Search by Batch"
             variant="outlined"
             value={searchBatch}
@@ -72,13 +75,14 @@ const SubmissionList = () => {
         </div>
 
         <div>
-          <InputLabel id="filter-label">Filter</InputLabel>
+          <InputLabel style={{ color:"#fff" }} id="filter-label">Filter</InputLabel>
           <Select
-            labelId="filter-label"
+          label="filter"
+             labelId="filter-label"
             value={searchBatch}
             onChange={(e) => setSearchBatch(e.target.value)}
             variant="outlined"
-            style={{width:"200px"}}
+            style={{width:"200px",background:"white" }}
           >
             <MenuItem value="">All</MenuItem>
             {defaultFilterOptions.map((option, index) => (
@@ -159,6 +163,8 @@ const SubmissionList = () => {
           </TableBody>
         </Table>
       </TableContainer>
+      </div>
+      <Footer/>
     </>
   );
 };

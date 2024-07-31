@@ -3,9 +3,9 @@ import { Container, Grid, Typography, Link } from '@mui/material';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer style={{ background:"#000", width:"100%" , display:"flex" , justifyItems:"center" }}>
       {/* Footer Start */}
-      <Container maxWidth="xl" sx={{ backgroundColor: 'black', color: 'white', py: 3 }} className="footer">
+      <Container maxWidth="xl" sx={{ backgroundColor: 'black', color: 'white', py: 3,   }} className="footer">
         <Container>
           <Grid container spacing={3}>
             <Grid item xs={12} md={6}>

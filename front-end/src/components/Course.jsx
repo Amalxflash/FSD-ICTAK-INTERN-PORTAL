@@ -1,54 +1,251 @@
-import React from 'react';
-import { Container, Typography, Grid, Button, Card, CardContent, CardMedia, Box } from '@mui/material';
-import courseImage1 from '../images/course-1.jpeg';
-import courseImage2 from '../images/course-2.webp';
-import courseImage3 from '../images/course-3.webp';
+import React from "react";
 
 const Course = () => {
   return (
     <>
       {/* Courses Start */}
-      <Container maxWidth="xxl" py={5}>
-        <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <Typography variant="h6" component="h2" sx={{ bgcolor: '#06BBCC', color: 'white', py: 1, px: 3, borderRadius: '5px' }}>
-            Courses
-          </Typography>
-          <Typography variant="h3" mt={3} mb={5}>Popular Courses</Typography>
-        </div>
-        <Grid container spacing={4} justifyContent="center">
-          {[{ image: courseImage1, title: 'Certified Specialist in Data Science & Analytics', instructor: 'Mridula', duration: '10 Hrs', students: '60 Students' },
-            { image: courseImage2, title: 'Certified Specialist in Software Testing', instructor: 'Tiya', duration: '11.49 Hrs', students: '60 Students' },
-            { image: courseImage3, title: 'Certified Specialist in Full Stack Development (MERN)', instructor: 'John Doe', duration: '1.49 Hrs', students: '30 Students' }].map((course, index) => (
-              <Grid key={index} item lg={4} md={6} xs={12}>
-                <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', transition: 'transform 0.3s', ':hover': { transform: 'scale(1.05)' } }}>
-                  <CardMedia
-                    component="img"
-                    image={course.image}
-                    alt={course.title}
-                    sx={{ height:'300px', objectFit: 'cover' }} // Maintain image aspect ratio and fill the container
+      <div className="text-light" style={{backgroundColor:'#004080'}}>
+      <div className="container-xxl py-5">
+        <div className="container">
+          <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h1 className="mb-5 text-light">Well-Liked Courses</h1>
+          </div>
+          <div className="row g-4 justify-content-center">
+            <div
+              className="col-lg-4 col-md-6 wow fadeInUp"
+              data-wow-delay="0.1s"
+            >
+              <div className="course-item bg-light">
+                <div className="position-relative overflow-hidden">
+                  <img
+                    className="img-fluid"
+                    style={{ height: "270px" }}
+                    src="images/course-1.jpg"
+                    alt="course-img"
                   />
-                  <CardContent>
-                    <Typography variant="h5" gutterBottom sx={{ color: '#06BBCC' }}>{course.title}</Typography>
-                    <Typography variant="body1" paragraph>Course Fee: 30,000 INR</Typography>
-                    <Typography variant="body1" mb={4}>{course.title}</Typography>
-                    <Box sx={{ display: 'flex', borderTop: '1px solid #ccc', p: 2 }}>
-                      <Typography variant="body2" sx={{ flex: '1', borderRight: '1px solid #ccc', py: 2 }}>{course.instructor}</Typography>
-                      <Typography variant="body2" sx={{ flex: '1', borderRight: '1px solid #ccc', py: 2 }}>{course.duration}</Typography>
-                      <Typography variant="body2" sx={{ flex: '1', py: 2 }}>{course.students}</Typography>
-                    </Box>
-                  </CardContent>
-                  <Box sx={{ display: 'flex', justifyContent: 'space-between', p: 2 }}>
-                    <Button variant="contained" color="primary" size="small" href="#" sx={{ borderRadius: '30px' }}>Read More</Button>
-                    <Button variant="contained" color="primary" size="small" href="#" sx={{ borderRadius: '30px' }}>Join Now</Button>
-                  </Box>
-                </Card>
-              </Grid>
-            ))}
-        </Grid>
-      </Container>
+                  <div className="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                    <a
+                      href="#"
+                      className="flex-shrink-0 btn btn-sm btn-dark px-3 border-end"
+                      style={{ borderRadius: "30px 0 0 30px" }}
+                    >
+                      Read More
+                    </a>
+                    <a
+                      href="#"
+                      className="flex-shrink-0 btn btn-sm btn-dark px-3"
+                      style={{ borderRadius: "0 30px 30px 0" }}
+                    >
+                      Join Now
+                    </a>
+                  </div>
+                </div>
+                <div className="text-center p-4 pb-0">
+                  <h3 className="mb-0">60K INR + GST</h3>
+                  <div className="mb-3">⭐⭐⭐⭐⭐</div>
+                  <h5 className="mb-4 pb-4">
+                    PGP in Data Science & Machine Learning
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-lg-4 col-md-6 wow fadeInUp"
+              data-wow-delay="0.3s"
+            >
+              <div className="course-item bg-light">
+                <div className="position-relative overflow-hidden">
+                  <img
+                    className="img-fluid"
+                    style={{ height: "270px" }}
+                    src="images/course-2.jpg"
+                    alt="course-img"
+                  />
+                  <div className="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                    <a
+                      href="#"
+                      className="flex-shrink-0 btn btn-sm btn-dark px-3 border-end"
+                      style={{ borderRadius: "30px 0 0 30px" }}
+                    >
+                      Read More
+                    </a>
+                    <a
+                      href="#"
+                      className="flex-shrink-0 btn btn-sm btn-dark px-3"
+                      style={{ borderRadius: "0 30px 30px 0" }}
+                    >
+                      Join Now
+                    </a>
+                  </div>
+                </div>
+                <div className="text-center p-4 pb-0">
+                  <h3 className="mb-0">30K INR + GST</h3>
+                  <div className="mb-3">⭐⭐⭐⭐⭐</div>
+                  <h5 className="mb-4 pb-4">
+                    Certified Specialist in Full Stack Development (.NET)
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-lg-4 col-md-6 wow fadeInUp"
+              data-wow-delay="0.5s"
+            >
+              <div className="course-item bg-light">
+                <div className="position-relative overflow-hidden">
+                  <img
+                    className="img-fluid"
+                    style={{ height: "270px" }}
+                    src="images/course-3.png"
+                    alt="course-img"
+                  />
+                  <div className="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                    <a
+                      href="#"
+                      className="flex-shrink-0 btn btn-sm btn-dark px-3 border-end"
+                      style={{ borderRadius: "30px 0 0 30px" }}
+                    >
+                      Read More
+                    </a>
+                    <a
+                      href="#"
+                      className="flex-shrink-0 btn btn-sm btn-dark px-3"
+                      style={{ borderRadius: "0 30px 30px 0" }}
+                    >
+                      Join Now
+                    </a>
+                  </div>
+                </div>
+                <div className="text-center p-4 pb-0">
+                  <h3 className="mb-0">30K INR + GST</h3>
+                  <div className="mb-3">⭐⭐⭐⭐⭐</div>
+                  <h5 className="mb-4 pb-4">
+                    Certified Specialist in Full Stack Development (MERN)
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-lg-4 col-md-6 wow fadeInUp"
+              data-wow-delay="0.5s"
+            >
+              <div className="course-item bg-light">
+                <div className="position-relative overflow-hidden">
+                  <img
+                    className="img-fluid"
+                    style={{ height: "270px" }}
+                    src="images/course-4.jpg"
+                    alt="course-img"
+                  />
+                  <div className="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                    <a
+                      href="#"
+                      className="flex-shrink-0 btn btn-sm btn-dark px-3 border-end"
+                      style={{ borderRadius: "30px 0 0 30px" }}
+                    >
+                      Read More
+                    </a>
+                    <a
+                      href="#"
+                      className="flex-shrink-0 btn btn-sm btn-dark px-3"
+                      style={{ borderRadius: "0 30px 30px 0" }}
+                    >
+                      Join Now
+                    </a>
+                  </div>
+                </div>
+                <div className="text-center p-4 pb-0">
+                  <h3 className="mb-0">30K INR + GST</h3>
+                  <div className="mb-3">⭐⭐⭐⭐⭐</div>
+                  <h5 className="mb-4 pb-4">
+                    Certified Specialist in Data Science & Analytics
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-lg-4 col-md-6 wow fadeInUp"
+              data-wow-delay="0.5s"
+            >
+              <div className="course-item bg-light">
+                <div className="position-relative overflow-hidden">
+                  <img
+                    className="img-fluid"
+                    style={{ height: "270px" }}
+                    src="images/course-5.jpg"
+                    alt="course-img"
+                  />
+                  <div className="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                    <a
+                      href="#"
+                      className="flex-shrink-0 btn btn-sm btn-dark px-3 border-end"
+                      style={{ borderRadius: "30px 0 0 30px" }}
+                    >
+                      Read More
+                    </a>
+                    <a
+                      href="#"
+                      className="flex-shrink-0 btn btn-sm btn-dark px-3"
+                      style={{ borderRadius: "0 30px 30px 0" }}
+                    >
+                      Join Now
+                    </a>
+                  </div>
+                </div>
+                <div className="text-center p-4 pb-0">
+                  <h3 className="mb-0">40K INR + GST</h3>
+                  <div className="mb-3">⭐⭐⭐⭐⭐</div>
+                  <h5 className="mb-4 pb-4">
+                    Certified Specialist in Software Testing
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-lg-4 col-md-6 wow fadeInUp"
+              data-wow-delay="0.5s"
+            >
+              <div className="course-item bg-light">
+                <div className="position-relative overflow-hidden">
+                  <img
+                    className="img-fluid"
+                    style={{ height: "270px" }}
+                    src="images/course-6.jpg"
+                    alt="course-img"
+                  />
+                  <div className="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                    <a
+                      href="#"
+                      className="flex-shrink-0 btn btn-sm btn-dark px-3 border-end"
+                      style={{ borderRadius: "30px 0 0 30px" }}
+                    >
+                      Read More
+                    </a>
+                    <a
+                      href="#"
+                      className="flex-shrink-0 btn btn-sm btn-dark px-3"
+                      style={{ borderRadius: "0 30px 30px 0" }}
+                    >
+                      Join Now
+                    </a>
+                  </div>
+                </div>
+                <div className="text-center p-4 pb-0">
+                  <h3 className="mb-0">60K INR + GST</h3>
+                  <div className="mb-3">⭐⭐⭐⭐⭐</div>
+                  <h5 className="mb-4 pb-4">
+                    Web Design &amp; Development Course for Beginners
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
       {/* Courses End */}
     </>
   );
-}
+};
 
 export default Course;

@@ -44,9 +44,7 @@ const AdminNavbar = () => {
               <Button color="inherit" component={Link} to="/admin" className="nav-item nav-link">
                 Home
               </Button>
-              <Button color="inherit" component={Link} to="/addmentor" className="nav-item nav-link">
-                Mentor Form
-              </Button>
+             
               <Button color="inherit" component={Link} to="/mentors" className="nav-item nav-link">
                 Mentors
               </Button>
