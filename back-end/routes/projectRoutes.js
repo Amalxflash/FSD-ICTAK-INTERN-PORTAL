@@ -25,6 +25,17 @@ router.get('/topics', async (req, res) => {
   }
 });
 
+//Getting Project Count
+router.get('/projectCount', async (req, res) => {
+  try {
+      const projectCount = await Project.countDocuments();
+      res.status(200).json({ count: projectCount });
+  } catch (error) {
+      console.error('Error fetching the count:', error);
+      res.status(500).json({ message: 'Error fetching the count', error: error.toString() });
+  }
+});
+
 // Delete project topic by ID
 router.delete('/topics/:id', async (req, res) => {
   try {

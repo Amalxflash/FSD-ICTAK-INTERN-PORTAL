@@ -31,6 +31,16 @@ router.get('/mentors', async (req, res) => {
         res.status(500).send("Error fetching posts");
     }
 });
+//Getting Mentor Count
+router.get('/mentorCount', async (req, res) => {
+    try {
+        const mentorCount = await mentors.countDocuments();
+        res.status(200).json({ count: mentorCount });
+    } catch (error) {
+        console.error('Error fetching the count:', error);
+        res.status(500).json({ message: 'Error fetching the count', error: error.toString() });
+    }
+});
 
 
 //delete mentor
@@ -41,10 +51,10 @@ router.delete('/remove/:id', async (req, res) => {
         if (!deletedMentor) {
             return res.status(404).json({ error: "Mentor not found" });
         }
-        res.json({ message: "Mentor Info deleted successfully" });
+        res.json({status:true, message: "Mentor Info deleted successfully" });
     } catch (error) {
         console.error(error);
-        res.status(500).json({ error: "Internal server error" });
+        res.status(500).json({status:false, error: "Internal server error" });
     }
 });
 
